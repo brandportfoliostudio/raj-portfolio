@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Raj | Typography Content Creator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Instagram Embed -->
+  <script async src="https://www.instagram.com/embed.js"></script>
+
+  <style>
+    :root {
+      --red: #b11226;
+      --white: #ffffff;
+      --dark: #0f0f0f;
+      --gray: #777;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    section {
+      padding: 100px 10%;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(120deg, #fff 60%, #f9e6e9);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: 1.1;
+      color: var(--red);
+      animation: fadeUp 1.2s ease forwards;
+    }
+
+    .hero p {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: var(--gray);
+      max-width: 500px;
+      animation: fadeUp 1.6s ease forwards;
+    }
+
+    /* ABOUT */
+    .about h2,
+    .reels h2,
+    .contact h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+      color: var(--red);
+    }
+
+    .about p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      max-width: 700px;
+    }
+
+    .quote {
+      margin-top: 40px;
+      font-style: italic;
+      color: var(--dark);
+      border-left: 3px solid var(--red);
+      padding-left: 20px;
+    }
+
+    /* REELS */
+    .reels-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    blockquote.instagram-media {
+      border-radius: 14px !important;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+
+    /* CONTACT */
+    .contact p {
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+    }
+
+    .contact a {
+      color: var(--red);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>Raj<br>Typography Content Creator</h1>
+      <p>Minimal words. Maximum impact.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <h2>About</h2>
+    <p>
+      I create, edit, document, and design relatable typography content that connects with emotions,
+      daily thoughts, and the unheard side of life.
+    </p>
+
+    <div class="quote">
+      I don't chase trends, I create them.<br>
+      Creator mode on!<br>
+      Consistency over motivation.
+    </div>
+  </section>
+
+  <!-- REELS -->
+  <section class="reels">
+    <h2>Work / Reels</h2>
+
+    <div class="reels-grid">
+
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DQx004QCL1R/" data-instgrm-version="14"></blockquote>
+
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSwMKxgDGgx/" data-instgrm-version="14"></blockquote>
+
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSA4ortjEtM/" data-instgrm-version="14"></blockquote>
+
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DRxVQDUEpF_/" data-instgrm-version="14"></blockquote>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:rajbhojnani07@gmail.com">rajbhojnani07@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/the_.unheard.side" target="_blank">@the_.unheard.side</a></p>
+  </section>
+
+  <footer>
+    © 2025 Raj — Typography Portfolio
+  </footer>
+
+</body>
+</html>
