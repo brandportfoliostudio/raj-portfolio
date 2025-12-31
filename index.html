@@ -1,41 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raj | Typography Content Creator</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- Instagram Embed -->
-  <script async src="https://www.instagram.com/embed.js"></script>
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
-    :root {
-      --red: #c1121f;
-      --red-soft: #f4d7db;
-      --dark: #111;
-      --gray: #666;
-      --bg: #ffffff;
-    }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
 
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--dark);
+      background: linear-gradient(135deg, #ffffff, #f6f6f6);
+      color: #111;
       overflow-x: hidden;
     }
 
     section {
-      padding: 110px 12%;
+      padding: 90px 8%;
     }
 
     /* HERO */
@@ -43,165 +34,208 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      background: linear-gradient(
-        135deg,
-        #ffffff 40%,
-        var(--red-soft) 100%
-      );
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(120deg, #ffffff, #ffe6ea);
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 30px;
+      border: 4px solid #fff;
+      box-shadow: 0 20px 45px rgba(217, 4, 41, 0.3);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0); }
     }
 
     .hero h1 {
       font-family: 'Antonio', sans-serif;
-      font-size: clamp(3.5rem, 7vw, 6rem);
-      letter-spacing: 1px;
-      line-height: 1.05;
-      color: var(--red);
-      animation: fadeUp 1.2s ease forwards;
+      font-size: 4rem;
+      letter-spacing: 2px;
+      animation: pop 1.4s ease;
     }
 
     .hero span {
-      display: block;
-      font-size: 1.1rem;
-      color: var(--gray);
+      color: #d90429;
+    }
+
+    @keyframes pop {
+      0% { opacity: 0; transform: scale(0.85); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .hero p {
       margin-top: 18px;
-      max-width: 500px;
-      animation: fadeUp 1.6s ease forwards;
+      font-size: 1.1rem;
+      opacity: 0.8;
+      animation: fadeUp 1.6s ease;
+    }
+
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(18px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .badge {
+      margin-top: 22px;
+      display: inline-block;
+      padding: 9px 20px;
+      background: rgba(217,4,41,0.1);
+      color: #d90429;
+      font-weight: 600;
+      border-radius: 30px;
+      font-size: 0.9rem;
     }
 
     /* SECTION TITLES */
     h2 {
       font-family: 'Antonio', sans-serif;
       font-size: 2.6rem;
-      letter-spacing: 1px;
-      color: var(--red);
-      margin-bottom: 25px;
+      margin-bottom: 22px;
     }
 
     /* ABOUT */
     .about p {
-      font-size: 1.08rem;
-      line-height: 1.9;
       max-width: 720px;
-    }
-
-    .manifesto {
-      margin-top: 50px;
-      padding-left: 24px;
-      border-left: 3px solid var(--red);
-      font-style: italic;
       font-size: 1.05rem;
       line-height: 1.8;
     }
 
+    .quote {
+      margin-top: 28px;
+      font-weight: 600;
+      color: #d90429;
+    }
+
     /* REELS */
-    .reels-grid {
-      margin-top: 50px;
+    .reel-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+      margin-top: 40px;
     }
 
-    blockquote.instagram-media {
-      border-radius: 18px !important;
-      overflow: hidden;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.08);
-      transition: transform 0.4s ease;
-    }
-
-    blockquote.instagram-media:hover {
-      transform: translateY(-8px);
+    .reel iframe {
+      width: 100%;
+      height: 480px;
+      border-radius: 18px;
+      border: none;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.15);
     }
 
     /* CONTACT */
+    .contact {
+      background: #111;
+      color: #fff;
+      text-align: center;
+    }
+
     .contact p {
       font-size: 1.05rem;
-      margin-bottom: 14px;
+      margin: 14px 0;
     }
 
     .contact a {
-      color: var(--red);
+      color: #ff4d6d;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
     }
 
-    /* FOOTER */
     footer {
+      background: #000;
+      color: #777;
       text-align: center;
-      padding: 35px;
-      font-size: 0.9rem;
-      color: var(--gray);
+      padding: 20px;
+      font-size: 0.85rem;
     }
 
-    /* ANIMATION */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.8rem;
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-      section {
-        padding: 90px 8%;
+      .profile-pic {
+        width: 120px;
+        height: 120px;
       }
     }
   </style>
 </head>
-
 <body>
 
   <!-- HERO -->
   <section class="hero">
-    <div>
-      <h1>Raj</h1>
-      <h1>Typography Creator</h1>
-      <span>Relatable words. Clean design. Emotional impact.</span>
+    <div data-aos="fade-up">
+      <img src="pfp.jpg" alt="Raj Profile Picture" class="profile-pic">
+      <h1>Raj <span>| Typography Content Creator</span></h1>
+      <p>Minimal • Relatable • Impactful</p>
+      <div class="badge">Creator Mode On</div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section class="about">
-    <h2>About</h2>
-    <p>
-      I create, edit, document, and design relatable typography content that reflects
-      emotions, daily thoughts, and stories people feel but don’t always say.
+    <h2 data-aos="fade-right">About</h2>
+    <p data-aos="fade-up">
+      I create, edit, document and design relatable typography content that connects with real emotions.
+      My focus is on consistency, simplicity and storytelling through words.
     </p>
 
-    <div class="manifesto">
-      I don't chase trends, I create them.<br>
+    <p class="quote" data-aos="fade-up">
+      I don’t chase trends, I create them.<br>
       Creator mode on!<br>
       Consistency over motivation.
-    </div>
+    </p>
   </section>
 
   <!-- REELS -->
   <section class="reels">
-    <h2>Selected Work</h2>
+    <h2 data-aos="fade-right">Featured Reels</h2>
 
-    <div class="reels-grid">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DQx004QCL1R/" data-instgrm-version="14"></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSwMKxgDGgx/" data-instgrm-version="14"></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSA4ortjEtM/" data-instgrm-version="14"></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DRxVQDUEpF_/" data-instgrm-version="14"></blockquote>
+    <div class="reel-grid">
+      <div class="reel" data-aos="zoom-in">
+        <iframe src="https://www.instagram.com/reel/DQx004QCL1R/embed"></iframe>
+      </div>
+      <div class="reel" data-aos="zoom-in">
+        <iframe src="https://www.instagram.com/reel/DSwMKxgDGgx/embed"></iframe>
+      </div>
+      <div class="reel" data-aos="zoom-in">
+        <iframe src="https://www.instagram.com/reel/DSA4ortjEtM/embed"></iframe>
+      </div>
+      <div class="reel" data-aos="zoom-in">
+        <iframe src="https://www.instagram.com/reel/DRxVQDUEpF_/embed"></iframe>
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section class="contact">
-    <h2>Contact</h2>
+    <h2 data-aos="fade-up">Contact</h2>
     <p>Email: <a href="mailto:rajbhojnani07@gmail.com">rajbhojnani07@gmail.com</a></p>
     <p>Instagram: <a href="https://instagram.com/the_.unheard.side" target="_blank">@the_.unheard.side</a></p>
   </section>
 
   <footer>
-    © 2025 Raj — Typography Portfolio
+    © 2025 Raj • Typography Portfolio
   </footer>
+
+  <!-- AOS SCRIPT -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+  </script>
 
 </body>
 </html>
-  
+
